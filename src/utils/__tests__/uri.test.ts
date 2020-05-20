@@ -1,4 +1,4 @@
-import { execute } from 'apollo-link'
+import { execute, ApolloLink } from 'apollo-link'
 import fetchMock = require('fetch-mock')
 import { PrismicLink } from '../../index'
 import gql from 'graphql-tag'
@@ -284,7 +284,11 @@ describe('PrismicLink', () => {
       uri: 'https://test.prismic.io/graphql',
     })
 
-    execute(link, { query, variables, extensions }).subscribe({
+    execute((link as unknown) as ApolloLink, {
+      query,
+      variables,
+      extensions,
+    }).subscribe({
       next: makeCallback(done, () => {
         // @ts-ignore
         const [uri, options] = fetchMock.lastCall()
@@ -308,7 +312,11 @@ describe('PrismicLink', () => {
       repository: 'test',
     })
 
-    execute(link, { query, variables, extensions }).subscribe({
+    execute((link as unknown) as ApolloLink, {
+      query,
+      variables,
+      extensions,
+    }).subscribe({
       next: makeCallback(done, () => {
         // @ts-ignore
         const [uri, options] = fetchMock.lastCall()

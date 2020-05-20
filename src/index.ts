@@ -1,4 +1,4 @@
-import { HttpLink } from 'apollo-link-http'
+import { HttpLink, ApolloLink } from '@apollo/client'
 import { setContext } from 'apollo-link-context'
 import Prismic = require('prismic-javascript')
 
@@ -50,7 +50,7 @@ export function PrismicLink({
 
   const prismicClient = Prismic.client(apiEndpoint, { accessToken })
 
-  const prismicLink = setContext(
+  const prismicLink = (setContext(
     (request: any, previousContext: { headers: any }) => {
       return prismicClient.getApi().then((api: any) => ({
         headers: {
@@ -63,7 +63,7 @@ export function PrismicLink({
         },
       }))
     }
-  )
+  ) as unknown) as ApolloLink
 
   const httpLink = new HttpLink({
     uri: gqlEndpoint,
