@@ -12,5 +12,5 @@
     "esModuleInterop": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modoules", "lib/**/*"]
+  "exclude": ["node_modoules", "lib/**/*", "src/**/*.test.ts"]
 }
