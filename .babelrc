@@ -6,6 +6,6 @@
         "useBuiltIns": "entry"
       }
     ],
-    "minify"
+    "@babel/preset-typescript"
   ]
 }
