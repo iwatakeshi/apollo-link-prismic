@@ -24,24 +24,27 @@
   },
   "homepage": "https://github.com/prismicio/apollo-link-prismic#readme",
   "dependencies": {
-    "apollo-boost": "^0.4.4",
-    "apollo-cache-inmemory": "^1.6.3",
-    "apollo-client": "^2.6.4",
-    "apollo-link": "^1.2.3",
-    "apollo-link-context": "^1.0.9",
-    "apollo-link-http": "^1.5.16",
-    "graphql": "^14.5.8",
-    "prismic-javascript": "^1.5.0"
+    "@apollo/client": "^3.0.0-beta.49",
+    "@babel/preset-typescript": "^7.9.0",
+    "apollo-boost": "^0.4.9",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "graphql": "^15.0.0",
+    "prismic-javascript": "^2.7.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-preset-minify": "^0.4.3",
-    "fetch-mock": "^8.0.0",
-    "graphql-tag": "^2.10.1",
-    "jest": "^24.9.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.9.35",
+    "fetch-mock": "^9.9.0",
+    "graphql-tag": "^2.10.3",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
   }
 }
