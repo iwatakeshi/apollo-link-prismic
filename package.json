@@ -2,7 +2,7 @@
   "name": "apollo-link-prismic",
   "version": "1.0.7",
   "description": "Apollo link for Prismic",
-  "main": "dist/apollo-link-prismic.min.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepare": "tsc",
     "prepare": "npm run build",
