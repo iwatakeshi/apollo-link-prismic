@@ -4,7 +4,7 @@
   "description": "Apollo link for Prismic",
   "main": "dist/apollo-link-prismic.min.js",
   "scripts": {
-    "build": "rollup --config rollup.config.js src/index.js",
+    "prepare": "tsc",
     "prepare": "npm run build",
     "test": "jest tests"
   },
@@ -42,7 +42,7 @@
     "fetch-mock": "^8.0.0",
     "graphql-tag": "^2.10.1",
     "jest": "^24.9.0",
-    "rollup": "^1.27.5",
-    "rollup-plugin-babel-minify": "^9.1.1"
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
   }
 }
