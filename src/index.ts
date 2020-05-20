@@ -54,7 +54,7 @@ export function PrismicLink({
     (request: any, previousContext: { headers: any }) => {
       return prismicClient.getApi().then((api: any) => ({
         headers: {
-          'Prismic-ref': previewRef || api.masterRef?.ref,
+          'Prismic-ref': previewRef || api.masterRef.ref,
           ...previousContext.headers,
           ...(api.integrationFieldRef
             ? { 'Prismic-integration-field-ref': api.integrationFieldRef }
